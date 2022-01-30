@@ -40,10 +40,10 @@
                                 Email
                                 <span wire:click="sortBy('email')" class="float-right">
                                     <i
-                                        class="fa fa-arrow-up {{ $sortColumnName == 'name' && $sortDirection == 'asc' ? '' : 'text-muted' }}">
+                                        class="fa fa-arrow-up {{ $sortColumnName == 'email' && $sortDirection == 'asc' ? '' : 'text-muted' }}">
                                     </i>
                                     <i
-                                        class="fa fa-arrow-down {{ $sortColumnName == 'name' && $sortDirection == 'desc' ? '' : 'text-muted' }}">
+                                        class="fa fa-arrow-down {{ $sortColumnName == 'email' && $sortDirection == 'desc' ? '' : 'text-muted' }}">
                                     </i>
                                 </span>
                             </th>
