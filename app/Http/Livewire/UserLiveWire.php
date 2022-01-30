@@ -41,7 +41,6 @@ class UserLiveWire extends Component
         $about = $this->model->findOrFail($this->userId);
         $about->delete();
         session()->flash('success', 'User Deleted Successfully.');
-
     }
 
     private function perRow()
@@ -64,6 +63,7 @@ class UserLiveWire extends Component
     }
     public function render()
     {
+
         $users = $this->model->query();
 
         if ($this->search) {

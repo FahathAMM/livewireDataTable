@@ -50,8 +50,8 @@
                             <th scope="col">action</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        @forelse ($users as $index => $user)
+                    @forelse ($users as $index => $user)
+                        <tbody>
                             <tr>
                                 <th scope="row">{{ $index + $users->firstItem() }}</th>
                                 <td>{{ $user->name }}</td>
@@ -67,11 +67,12 @@
                                 </td>
                             </tr>
                         @empty
-                            <p>no data</p>
-                        @endforelse
-
-
-                    </tbody>
+                            <div class="alert alert-danger w-50 " role="alert">
+                                <p>data not found</p>
+                                <p class="mb-0"></p>
+                            </div>
+                        </tbody>
+                    @endforelse
                 </table>
                 {{ $users->links() }}
             </div>
