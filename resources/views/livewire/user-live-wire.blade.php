@@ -13,7 +13,7 @@
                 <div>
                     <form action="">
                         <input wire:model="search" type="text" class="float-right w-25 my-2 form-control">
-                        <select wire:model="per_row" type="text" class="float-left w-25 my-2 form-control">
+                        <select wire:model="perRow" type="text" class="float-left w-25 my-2 form-control">
                             <option value="10">10</option>
                             <option value="50">50</option>
                             <option value="100">100</option>

@@ -15,7 +15,7 @@ class UserLiveWire extends Component
     public $userId = null;
     public $model;
     public $search;
-    public $per_row;
+    public $perRow;
 
     public $sortColumnName = 'created_at';
     public $sortDirection  = 'desc';
@@ -44,19 +44,18 @@ class UserLiveWire extends Component
 
     }
 
-    public function type($type)
-    {
-        $this->resetPage();
-        return $this->type = $type;
-    }
-
     private function perRow()
     {
-        if ($this->per_row) {
-            return $this->per_row;
+        if ($this->perRow) {
+            return $this->perRow;
         } else {
             return config('pagination.page.default');
         }
+    }
+
+    public function updatedPerRow()
+    {
+        $this->resetPage();
     }
 
     public function updatedSearch()
